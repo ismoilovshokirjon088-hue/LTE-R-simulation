@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+*.egg-info/
+# Do NOT ignore the archived outputs — they are reference material for reviewers
+# (figure3_output/, figure4_output/, figure5_output/)

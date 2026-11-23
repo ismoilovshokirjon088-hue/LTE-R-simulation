@@ -1,0 +1,4 @@
+# Package versions used in the archived runs
+numpy>=1.24
+matplotlib>=3.5
+scipy>=1.10            # optional: exact t-quantiles, Wilcoxon, Mann-Whitney

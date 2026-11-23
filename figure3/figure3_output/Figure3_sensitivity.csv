@@ -1,0 +1,37 @@
+parameter,description,value,is_default,config,delay_ms_mean,delay_ms_ci_lo,delay_ms_ci_hi,P_del_mean,P_del_ci_lo,P_del_ci_hi,n_runs
+gamma_th_db,SINR / Qout decoding threshold (dB),-10,False,C0,18.9947,17.7058,20.2837,0.982545,0.978131,0.98696,20
+gamma_th_db,SINR / Qout decoding threshold (dB),-10,False,C3,13.7994,13.7208,13.8781,0.999955,0.999859,1.00005,20
+gamma_th_db,SINR / Qout decoding threshold (dB),-8,True,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+gamma_th_db,SINR / Qout decoding threshold (dB),-8,True,C3,13.7945,13.7227,13.8662,0.999955,0.999859,1.00005,20
+gamma_th_db,SINR / Qout decoding threshold (dB),-6,False,C0,19.9947,18.5081,21.4814,0.977636,0.972707,0.982566,20
+gamma_th_db,SINR / Qout decoding threshold (dB),-6,False,C3,13.7605,13.6861,13.835,0.999909,0.999778,1.00004,20
+noise_figure_db,Receiver noise figure (dB),5,False,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+noise_figure_db,Receiver noise figure (dB),5,False,C3,13.7945,13.7227,13.8662,0.999955,0.999859,1.00005,20
+noise_figure_db,Receiver noise figure (dB),9,True,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+noise_figure_db,Receiver noise figure (dB),9,True,C3,13.7945,13.7227,13.8662,0.999955,0.999859,1.00005,20
+noise_figure_db,Receiver noise figure (dB),13,False,C0,19.1293,17.8058,20.4529,0.982182,0.977931,0.986433,20
+noise_figure_db,Receiver noise figure (dB),13,False,C3,13.7945,13.7227,13.8662,0.999955,0.999859,1.00005,20
+shadow_sigma_db,Shadow fading standard deviation (dB),2,False,C0,15.6654,15.5131,15.8178,0.995773,0.995121,0.996424,20
+shadow_sigma_db,Shadow fading standard deviation (dB),2,False,C3,13.4301,13.3904,13.4698,1,1,1,20
+shadow_sigma_db,Shadow fading standard deviation (dB),3.73,True,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+shadow_sigma_db,Shadow fading standard deviation (dB),3.73,True,C3,13.7945,13.7227,13.8662,0.999955,0.999859,1.00005,20
+shadow_sigma_db,Shadow fading standard deviation (dB),6,False,C0,51.856,45.4944,58.2176,0.879273,0.862373,0.896172,20
+shadow_sigma_db,Shadow fading standard deviation (dB),6,False,C3,15.115,14.8267,15.4034,0.999045,0.9982,0.99989,20
+bg_buffer_pkts,Finite buffer of non-control queue (packets),25,False,C0,17.0199,16.5074,17.5323,0.991545,0.989729,0.993362,20
+bg_buffer_pkts,Finite buffer of non-control queue (packets),25,False,C3,13.7635,13.7018,13.8252,0.999955,0.999859,1.00005,20
+bg_buffer_pkts,Finite buffer of non-control queue (packets),100,True,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+bg_buffer_pkts,Finite buffer of non-control queue (packets),100,True,C3,13.7945,13.7227,13.8662,0.999955,0.999859,1.00005,20
+bg_buffer_pkts,Finite buffer of non-control queue (packets),400,False,C0,20.7319,17.6414,23.8225,0.979136,0.972131,0.986142,20
+bg_buffer_pkts,Finite buffer of non-control queue (packets),400,False,C3,13.7945,13.7227,13.8662,0.999955,0.999859,1.00005,20
+t_switch_s,Standby-path switching delay (s),0.005,False,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+t_switch_s,Standby-path switching delay (s),0.005,False,C3,13.7395,13.6744,13.8045,0.999955,0.999859,1.00005,20
+t_switch_s,Standby-path switching delay (s),0.01,True,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+t_switch_s,Standby-path switching delay (s),0.01,True,C3,13.7945,13.7227,13.8662,0.999955,0.999859,1.00005,20
+t_switch_s,Standby-path switching delay (s),0.02,False,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+t_switch_s,Standby-path switching delay (s),0.02,False,C3,13.9045,13.8178,13.9912,0.999955,0.999859,1.00005,20
+backup_unavail_frac,Long-run standby-path unavailability,0.001,False,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+backup_unavail_frac,Long-run standby-path unavailability,0.001,False,C3,13.7839,13.7156,13.8521,1,1,1,20
+backup_unavail_frac,Long-run standby-path unavailability,0.01,True,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+backup_unavail_frac,Long-run standby-path unavailability,0.01,True,C3,13.7945,13.7227,13.8662,0.999955,0.999859,1.00005,20
+backup_unavail_frac,Long-run standby-path unavailability,0.05,False,C0,19.1296,17.8061,20.453,0.982182,0.977931,0.986433,20
+backup_unavail_frac,Long-run standby-path unavailability,0.05,False,C3,13.8992,13.7662,14.0322,0.9995,0.999053,0.999947,20

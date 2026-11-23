@@ -1,0 +1,13 @@
+speed_kmh,mechanism,main_effect_delay_reduction_ms,ci95_lo,ci95_hi,n_runs
+160,priority scheduling (P),2.75117,2.60776,2.89457,100
+160,standby path (B),2.01672,1.79038,2.24305,100
+160,adaptive handover (H),0,0,0,100
+200,priority scheduling (P),3.20728,3.02483,3.38973,100
+200,standby path (B),3.06494,2.74812,3.38176,100
+200,adaptive handover (H),0.484576,0.278384,0.690768,100
+250,priority scheduling (P),3.43592,3.25682,3.61501,100
+250,standby path (B),3.63565,3.17819,4.09311,100
+250,adaptive handover (H),0.265919,0.0781694,0.453669,100
+300,priority scheduling (P),3.97729,3.7648,4.18977,100
+300,standby path (B),4.70566,4.32392,5.0874,100
+300,adaptive handover (H),0.245187,-0.0499244,0.540298,100

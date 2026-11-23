@@ -1,0 +1,5 @@
+speed_kmh,comparison,metric,n,diff_mean,diff_ci_lo,diff_ci_hi,reduction_pct,reduction_ci_lo,reduction_ci_hi,wilcoxon_p,cohen_dz,wilcoxon_p_holm
+160,C0 minus C3,mean delay (ms),100,4.76788,4.42078,5.11499,25.6654,24.3592,27.0012,3.89656e-18,2.72556,1.55862e-17
+200,C0 minus C3,mean delay (ms),100,6.83673,6.18564,7.48781,33.1119,31.121,35.2006,3.89656e-18,2.08352,1.55862e-17
+250,C0 minus C3,mean delay (ms),100,7.25771,6.5577,7.95772,34.4535,32.391,36.5449,3.89656e-18,2.05724,1.55862e-17
+300,C0 minus C3,mean delay (ms),100,8.7856,7.96626,9.60495,38.8238,36.7089,40.9496,3.89656e-18,2.12763,1.55862e-17

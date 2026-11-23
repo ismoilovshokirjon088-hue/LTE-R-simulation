@@ -1,0 +1,5 @@
+speed_kmh,C0_simulated_mean_delay_ms,C0_analytic_MM1_upper_bound_ms,C0_handover_HARQ_overhead_ms,lag1_autocorr_C0,lag1_autocorr_C3,C0_P_del,C3_P_del,C0_meets_99pct_P_del,C3_meets_99pct_P_del
+160,18.5771,16.83,1.74706,-0.183197,-0.0902777,0.982073,0.999964,False,True
+200,20.6474,16.83,3.81736,0.0769631,0.095048,0.974155,0.999945,False,True
+250,21.0652,16.83,4.23523,0.128674,-0.000475295,0.972273,0.999918,False,True
+300,22.6294,16.83,5.79942,0.066741,-0.158562,0.965209,0.999955,False,True

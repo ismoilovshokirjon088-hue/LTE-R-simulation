@@ -1,0 +1,13 @@
+speed_kmh,comparison,metric,n,diff_mean,diff_ci_lo,diff_ci_hi,reduction_pct,reduction_ci_lo,reduction_ci_hi,wilcoxon_p,cohen_dz
+160,C0 minus C1 (priority scheduling),mean delay (ms),100,3.63884,3.41858,3.85909,19.5878,18.7862,20.3779,3.89656e-18,3.27811
+160,C1 minus C2 (standby path),mean delay (ms),100,1.12904,0.982611,1.27548,7.55809,6.73433,8.49015,3.89656e-18,1.52989
+160,C2 minus C3 (adaptive handover),mean delay (ms),100,0,0,0,0,0,0,1,nan
+200,C0 minus C1 (priority scheduling),mean delay (ms),100,4.82421,4.43605,5.21238,23.3648,22.2832,24.4837,3.89656e-18,2.46606
+200,C1 minus C2 (standby path),mean delay (ms),100,1.88114,1.61169,2.15058,11.8885,10.5114,13.4081,3.89656e-18,1.38528
+200,C2 minus C3 (adaptive handover),mean delay (ms),100,0.131373,0.100868,0.161878,0.942281,0.72844,1.15826,2.81417e-13,0.854527
+250,C0 minus C1 (priority scheduling),mean delay (ms),100,5.05329,4.69994,5.40665,23.9888,23.0344,24.9483,3.89656e-18,2.8376
+250,C1 minus C2 (standby path),mean delay (ms),100,2.02515,1.63157,2.41872,12.6477,10.7714,14.8451,3.89656e-18,1.02098
+250,C2 minus C3 (adaptive handover),mean delay (ms),100,0.179268,0.150411,0.208126,1.2817,1.0878,1.48147,1.42898e-16,1.23262
+300,C0 minus C1 (priority scheduling),mean delay (ms),100,6.0029,5.53709,6.46871,26.527,25.4449,27.5926,3.89656e-18,2.55706
+300,C1 minus C2 (standby path),mean delay (ms),100,2.57966,2.22937,2.92996,15.5153,13.892,17.2734,3.89656e-18,1.46123
+300,C2 minus C3 (adaptive handover),mean delay (ms),100,0.203042,0.16176,0.244324,1.44546,1.16484,1.71851,7.14202e-14,0.97593
