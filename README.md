@@ -22,11 +22,11 @@ reproduced independently by a reviewer.
 │   ├── figure3_output/            # outputs of the archived full run (for reference)
 │   └── README.md                  # how to reproduce Figure 3
 ├── figure4/
-│   ├── figure4.py                 # standalone
-│   ├── figure4_output/
-│   └── README.md
+│   ├── figure4.py                 # standalone: engine + Fig 4 production in one file
+│   ├── figure4_output/            # outputs of the archived full run (for reference)
+│   └── README.md                  # how to reproduce Figure 4
 ├── figure5/
-│   ├── figure5.py                 # standalone
+│   ├── figure5.py                 # standalone  (to be added)
 │   ├── figure5_output/
 │   └── README.md
 ├── requirements.txt               # Python package versions used in the archived runs
@@ -39,11 +39,10 @@ reproduced independently by a reviewer.
 ```bash
 cd figure3                     # or figure4 / figure5
 pip install -r ../requirements.txt
-python figure3.py              # full 100-run study, approx. 3 min on 2-4 cores
+python figure3.py              # full study; no --quick or --sensitivity flags
 ```
 
-Each figure folder's README describes its CLI options (`--quick`, `--sensitivity`, ...)
-and lists every output file.
+Each figure folder's README describes the exact CLI options and lists every output file.
 
 ## What the output guarantees
 
@@ -64,7 +63,9 @@ With the same base seed and the same package versions the run is bit-reproducibl
 - Block errors come from an information-outage link abstraction with chase-combining
   HARQ, not from PHY-level BLER curves.
 - Parameters tagged ASSUMED are not measured values; their effect on the main
-  conclusion is reported in the sensitivity sweep of each figure.
+  conclusion is reported in the sensitivity sweep of Figure 3.
+- The 99.9 % reliability target shown on Figure 4 is a generic SIL-3-style benchmark;
+  the FRMCS 99.9999 % target is NOT met by any simulated configuration at any load.
 
 ## License
 

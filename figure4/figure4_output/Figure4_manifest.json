@@ -1,0 +1,419 @@
+{
+  "figure": "Figure 4 - deadline reliability vs offered load at 200 km/h",
+  "status": "re-implemented simulation (NOT a restored copy of the original MATLAB code)",
+  "command_line": "figure4.py",
+  "base_seed": 20260101,
+  "runs_per_point": 100,
+  "rhos": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "speed_kmh": 200.0,
+  "cdf_rhos": [
+    0.7,
+    0.9
+  ],
+  "reliability_targets": [
+    0.99,
+    0.999
+  ],
+  "workers": 2,
+  "wall_clock_s": 180.8,
+  "common_random_numbers": "radio environment, traffic and fading draws are shared across all 4 configurations within a replication",
+  "environment": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "platform": "Linux-6.18.44-fc-v819-x86_64-with-glibc2.39",
+    "engine_version": "1.0.0",
+    "engine_sha256": "6e67300148ebbbdd2d023bf008a69f011ad0a9dd09fc7c2ece3f0d7a1c95985c",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "figure4_script_sha256": "6e67300148ebbbdd2d023bf008a69f011ad0a9dd09fc7c2ece3f0d7a1c95985c",
+  "engine_selftest": {
+    "engine_version": "1.0.0",
+    "n_runs": 24,
+    "all_pass": true,
+    "tests": [
+      {
+        "test": "T1 M/M/1 FIFO, control-class wait  vs Eq.(7)",
+        "simulated_ms": 4.735248447410105,
+        "ci95_ms": [
+          4.632781970398086,
+          4.837714924422124
+        ],
+        "reference_ms": 4.778666666666665,
+        "pass": true
+      },
+      {
+        "test": "T1 M/M/1 FIFO, other-class wait    vs Eq.(7)",
+        "simulated_ms": 4.763148674505054,
+        "ci95_ms": [
+          4.7007669698198224,
+          4.825530379190284
+        ],
+        "reference_ms": 4.778666666666665,
+        "pass": true
+      },
+      {
+        "test": "T2 4:1 accumulating priority, control wait vs Eq.(15a)",
+        "simulated_ms": 2.2938849466350533,
+        "ci95_ms": [
+          2.25150369633353,
+          2.3362661969365766
+        ],
+        "reference_ms": 2.305275701440797,
+        "pass": true
+      },
+      {
+        "test": "T2 4:1 accumulating priority, other wait   vs Eq.(15a)",
+        "simulated_ms": 4.8363655034068485,
+        "ci95_ms": [
+          4.772777850330303,
+          4.899953156483395
+        ],
+        "reference_ms": 4.853212003033256,
+        "pass": true
+      },
+      {
+        "test": "T2 conservation law rho_c*Wc + rho_o*Wo = rho*W_fifo",
+        "simulated_ms": 3.3333858505821072,
+        "reference_ms": 3.3450666666666655,
+        "pass": true
+      },
+      {
+        "test": "T3 M/D/1 FIFO, other-class wait vs Pollaczek-Khinchine",
+        "simulated_ms": 2.3627678678478192,
+        "ci95_ms": [
+          2.3319683756343252,
+          2.393567360061313
+        ],
+        "reference_ms": 2.3893333333333326,
+        "pass": true
+      },
+      {
+        "test": "T4 HARQ: mean attempts (forced BLER=0.2, max 4)",
+        "simulated": 1.2484525615429134,
+        "ci95": [
+          1.247132439446578,
+          1.2497726836392489
+        ],
+        "reference": 1.2479999999999998,
+        "pass": true
+      }
+    ]
+  },
+  "parameters": {
+    "fc_hz": {
+      "value": 465000000.0,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "bw_hz": {
+      "value": 5000000.0,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "cell_radius_m": {
+      "value": 1000.0,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "overlap_m": {
+      "value": 300.0,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "tx_power_dbm": {
+      "value": 43.0,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "msg_bytes": {
+      "value": 256,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "ctrl_rate_hz": {
+      "value": 10.0,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "r_eff_bps": {
+      "value": 1000000.0,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "t_proc_s": {
+      "value": 0.01,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "t_harq_rtt_s": {
+      "value": 0.008,
+      "source": "T4",
+      "note": "T_attempt = 8 ms"
+    },
+    "deadline_s": {
+      "value": 0.1,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "w_ctrl": {
+      "value": 4.0,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "w_other": {
+      "value": 1.0,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "h0_db": {
+      "value": 3.0,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "ttt0_s": {
+      "value": 0.16,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "adapt_h_coeff": {
+      "value": 480.0,
+      "source": "T4",
+      "note": "H(v)=480/v"
+    },
+    "adapt_ttt_coeff_ms": {
+      "value": 25600.0,
+      "source": "T4",
+      "note": "tau(v)=25600/v"
+    },
+    "t_ho_s": {
+      "value": 0.1,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "t_margin_s": {
+      "value": 0.05,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "t_obs_s": {
+      "value": 0.1,
+      "source": "T4",
+      "note": "Table 4"
+    },
+    "duration_s": {
+      "value": 120.0,
+      "source": "JSON",
+      "note": "earlier Python Figure 3 setup"
+    },
+    "warmup_s": {
+      "value": 10.0,
+      "source": "JSON",
+      "note": "earlier Python Figure 3 setup"
+    },
+    "pl_a": {
+      "value": 21.5,
+      "source": "REF",
+      "note": "WINNER II D2a path-loss parameter A (project paper on D2a power-distance handover)"
+    },
+    "pl_b": {
+      "value": 44.2,
+      "source": "REF",
+      "note": "WINNER II D2a path-loss parameter B"
+    },
+    "pl_c": {
+      "value": 20.0,
+      "source": "REF",
+      "note": "WINNER II D2a path-loss parameter C"
+    },
+    "d_track_m": {
+      "value": 50.0,
+      "source": "REF",
+      "note": "WINNER II D2a scenario description: eNB-track distance 50 m"
+    },
+    "h_bs_m": {
+      "value": 30.0,
+      "source": "REF",
+      "note": "WINNER II D2a scenario description: eNB height 30-32 m"
+    },
+    "h_ms_m": {
+      "value": 1.5,
+      "source": "REF",
+      "note": "WINNER II D2a scenario description: train antenna height 1.5 m"
+    },
+    "shadow_sigma_db": {
+      "value": 3.73,
+      "source": "REF",
+      "note": "manuscript ref. [13], LTE-R 2.6 GHz measurement, 3.73 dB (different carrier!)"
+    },
+    "rician_k_db": {
+      "value": 5.12,
+      "source": "REF",
+      "note": "K-factor of WINNER II listed in manuscript ref. [13], Table III"
+    },
+    "ant_gain_db": {
+      "value": 0.0,
+      "source": "ASSUMED",
+      "note": "no antenna gain assumed"
+    },
+    "noise_figure_db": {
+      "value": 9.0,
+      "source": "ASSUMED",
+      "note": ""
+    },
+    "shadow_dcorr_m": {
+      "value": 50.0,
+      "source": "ASSUMED",
+      "note": ""
+    },
+    "service_dist": {
+      "value": "deterministic",
+      "source": "ASSUMED",
+      "note": "fixed-size packet at fixed rate"
+    },
+    "ctrl_arrivals": {
+      "value": "periodic",
+      "source": "ASSUMED",
+      "note": "cyclic control traffic with random phase"
+    },
+    "interf_activity": {
+      "value": -1.0,
+      "source": "ASSUMED",
+      "note": "interfering cells transmit with probability rho"
+    },
+    "gamma_th_db": {
+      "value": -8.0,
+      "source": "ASSUMED",
+      "note": "typical out-of-sync level; verify against 3GPP TS 36.133 before citing"
+    },
+    "shannon_gap_db": {
+      "value": 3.0,
+      "source": "ASSUMED",
+      "note": ""
+    },
+    "max_harq_tx": {
+      "value": 4,
+      "source": "ASSUMED",
+      "note": ""
+    },
+    "meas_period_s": {
+      "value": 0.02,
+      "source": "ASSUMED",
+      "note": ""
+    },
+    "rlf_timer_s": {
+      "value": 1.0,
+      "source": "ASSUMED",
+      "note": "T310-like timer"
+    },
+    "t_reest_s": {
+      "value": 0.5,
+      "source": "ASSUMED",
+      "note": ""
+    },
+    "backup_unavail_frac": {
+      "value": 0.01,
+      "source": "ASSUMED",
+      "note": "A_b(t) two-state Markov model"
+    },
+    "backup_mean_down_s": {
+      "value": 0.5,
+      "source": "ASSUMED",
+      "note": "A_b(t) two-state Markov model"
+    },
+    "t_switch_s": {
+      "value": 0.01,
+      "source": "ASSUMED",
+      "note": "backup-path switching delay (not the 100 ms handover time)"
+    },
+    "pingpong_window_s": {
+      "value": 1.0,
+      "source": "ASSUMED",
+      "note": ""
+    },
+    "drain_s": {
+      "value": 5.0,
+      "source": "ASSUMED",
+      "note": "technical"
+    },
+    "bg_buffer_pkts": {
+      "value": 100,
+      "source": "ASSUMED",
+      "note": "finite eNB buffer for non-control traffic (~205 ms of link service time)"
+    },
+    "ideal_link": {
+      "value": false,
+      "source": "TEST",
+      "note": ""
+    },
+    "test_force_bler": {
+      "value": -1.0,
+      "source": "TEST",
+      "note": ""
+    }
+  },
+  "outputs": [
+    "Figure4_PLOT_DATA.csv",
+    "Figure4_cdf_samples.csv",
+    "Figure4_delay_CDF.pdf",
+    "Figure4_delay_CDF.png",
+    "Figure4_independence_check.csv",
+    "Figure4_manuscript_snippet.md",
+    "Figure4_model_summary.md",
+    "Figure4_paired_stats.csv",
+    "Figure4_reliability_analytic.csv",
+    "Figure4_reliability_vs_load.pdf",
+    "Figure4_reliability_vs_load.png",
+    "Figure4_review_point_mapping.md",
+    "Figure4_run_level.csv",
+    "Figure4_summary.csv",
+    "Figure4_threshold_crossings.csv"
+  ],
+  "key_results": {
+    "crossings_99pct": {
+      "C0": 0.6128390596745015,
+      "C1": 0.8020647321428568,
+      "C2": 0.8710843373493974,
+      "C3": 0.8885574837310205
+    },
+    "crossings_999pct": {
+      "C0": NaN,
+      "C1": NaN,
+      "C2": 0.7921875000000081,
+      "C3": 0.8069444444444461
+    },
+    "P_del_at_rho_0_70": {
+      "C0": 0.9766272727272726,
+      "C1": 0.9951000000000001,
+      "C2": 0.9999000000000001,
+      "C3": 0.9999454545454546
+    },
+    "P_del_at_rho_0_90": {
+      "C0": 0.7806181818181819,
+      "C1": 0.9720545454545456,
+      "C2": 0.9843272727272725,
+      "C3": 0.9880818181818184
+    }
+  },
+  "interpretation_limits": [
+    "Synthetic WINNER II D2a / log-normal-shadowing / Rician-fading channel; NOT ITU-R P.1812 and NOT field-validated.",
+    "Block errors from an information-outage link abstraction with chase-combining HARQ; no PHY-level BLER curves.",
+    "Parameters tagged ASSUMED are not measured values; the sensitivity of the main conclusion to them is reported in Figure 3's sensitivity sweep.",
+    "The 99.9 % threshold shown is a SIL-3-style benchmark, not the FRMCS 99.9999 % target; the latter is NOT met by any simulated configuration at any load.",
+    "The numbers replace the earlier (MATLAB-based) Figure 4 and must not be compared as if produced by the same model; the earlier inverse Pe calibration has been removed (see reviewer R2 comment 1)."
+  ]
+}
