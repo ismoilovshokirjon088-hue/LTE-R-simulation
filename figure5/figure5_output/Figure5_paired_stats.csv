@@ -1,0 +1,17 @@
+speed_kmh,comparison,metric,n,diff_mean,diff_ci_lo,diff_ci_hi,reduction_pct,reduction_ci_lo,reduction_ci_hi,wilcoxon_p,cohen_dz,wilcoxon_p_holm
+160,C0 P_out - C3 P_out,P_out,100,0.0134364,0.0124532,0.0144196,98.9953,98.1805,99.6587,3.66278e-18,2.71164,1.46511e-17
+200,C0 P_out - C3 P_out,P_out,100,0.0163091,0.015164,0.0174542,98.5173,97.6228,99.2716,3.75911e-18,2.82601,1.46511e-17
+250,C0 P_out - C3 P_out,P_out,100,0.0188364,0.0175727,0.0201,98.9494,98.3269,99.5117,3.80871e-18,2.95782,1.46511e-17
+300,C0 P_out - C3 P_out,P_out,100,0.0229909,0.0215466,0.0244352,98.2517,97.3116,99.0625,3.83049e-18,3.15861,1.46511e-17
+160,C0 P_out - C1 P_out (priority scheduling),P_out,100,0,0,0,0,0,0,1,nan,
+160,C1 P_out - C2 P_out (standby path),P_out,100,0.0134364,0.0124532,0.0144196,98.9953,98.1805,99.6587,3.66278e-18,2.71164,
+160,C2 P_out - C3 P_out (adaptive handover),P_out,100,0,0,0,0,nan,nan,1,nan,
+200,C0 P_out - C1 P_out (priority scheduling),P_out,100,0,0,0,0,0,0,1,nan,
+200,C1 P_out - C2 P_out (standby path),P_out,100,0.0163455,0.0151926,0.0174983,98.737,97.9602,99.4042,3.75211e-18,2.81322,
+200,C2 P_out - C3 P_out (adaptive handover),P_out,100,-3.63636e-05,-9.32327e-05,2.05055e-05,-17.3913,-56.25,8.0027,0.495086,-0.126876,
+250,C0 P_out - C1 P_out (priority scheduling),P_out,100,0,0,0,0,0,0,1,nan,
+250,C1 P_out - C2 P_out (standby path),P_out,100,0.0188273,0.0176027,0.0200518,98.9016,98.256,99.4973,3.78961e-18,3.05065,
+250,C2 P_out - C3 P_out (adaptive handover),P_out,100,9.09091e-06,-0.000117801,0.000135982,4.34783,-100,50,0.974159,0.0142156,
+300,C0 P_out - C1 P_out (priority scheduling),P_out,100,0,0,0,0,0,0,1,nan,
+300,C1 P_out - C2 P_out (standby path),P_out,100,0.0231818,0.0217355,0.0246282,99.0676,98.3514,99.6606,3.81129e-18,3.18023,
+300,C2 P_out - C3 P_out (adaptive handover),P_out,100,-0.000190909,-0.000359608,-2.221e-05,-87.5,-333.333,-15.625,0.0268186,-0.224545,

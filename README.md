@@ -26,9 +26,9 @@ reproduced independently by a reviewer.
 │   ├── figure4_output/            # outputs of the archived full run (for reference)
 │   └── README.md                  # how to reproduce Figure 4
 ├── figure5/
-│   ├── figure5.py                 # standalone  (to be added)
-│   ├── figure5_output/
-│   └── README.md
+│   ├── figure5.py                 # standalone: engine + Fig 5 production in one file
+│   ├── figure5_output/            # outputs of the archived full run (for reference)
+│   └── README.md                  # how to reproduce Figure 5
 ├── requirements.txt               # Python package versions used in the archived runs
 ├── LICENSE
 └── README.md                      # this file
@@ -39,7 +39,7 @@ reproduced independently by a reviewer.
 ```bash
 cd figure3                     # or figure4 / figure5
 pip install -r ../requirements.txt
-python figure3.py              # full study; no --quick or --sensitivity flags
+python figure3.py              # full study; engine self-test runs automatically
 ```
 
 Each figure folder's README describes the exact CLI options and lists every output file.
@@ -56,6 +56,12 @@ Each run writes a `manifest.json` containing:
 
 With the same base seed and the same package versions the run is bit-reproducible.
 
+## Shared engine
+
+Figures 3, 4 and 5 use byte-for-byte identical simulator logic, inlined inside each
+standalone script. The engine is validated against seven analytical queueing references
+on every run; results that could not be verified against the analytics are not reported.
+
 ## Known limitations (also documented in the manuscript, Section 5)
 
 - The radio layer is a synthetic WINNER II D2a / log-normal-shadowing / Rician-fading
@@ -66,6 +72,9 @@ With the same base seed and the same package versions the run is bit-reproducibl
   conclusion is reported in the sensitivity sweep of Figure 3.
 - The 99.9 % reliability target shown on Figure 4 is a generic SIL-3-style benchmark;
   the FRMCS 99.9999 % target is NOT met by any simulated configuration at any load.
+- The 100 ms handover execution time (Table 4) is an assumed procedure duration, not
+  a measured interruption duration; the per-cause attribution in Figure 5 separates
+  the assumed nominal handover blackout from radio-link failures and low-SINR outages.
 
 ## License
 
